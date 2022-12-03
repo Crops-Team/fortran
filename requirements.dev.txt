@@ -9,6 +9,7 @@ jupyter_dash
 colorama
 tables
 plotly
+matplotlib
 isort
 fortls
 pytest
