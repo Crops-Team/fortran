@@ -1,0 +1,14 @@
+Cython
+pandas
+numpy
+scipy
+scikit-learn
+notebook
+ipykernel
+jupyter_dash
+colorama
+tables
+plotly
+isort
+fortls
+pytest
