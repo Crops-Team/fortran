@@ -2,31 +2,41 @@
 Imagem para projetos fortran. O foco do projeto é atender as demandas da empresa Crops Team na área 
 de modelos agricola.
 
-A imagem inclui: 
- * Um ambiente `miniconda` com `python 3.x`;
- * O compilador `gfortran`; 
- * A ferramenta de automação de build `cmake` 
- * O gestor de repositorio `git`;
- * O editor de text `vim`;
- * O meta-pacote `build-essential`;
- * pacotes python:
-   * **C binding**: cython;
-   * **ciência de dados**: numpy, scipy, scikit-learn, pandas;
-   * **visualização de dados**: matplotlib, plotly, tables;
-   * **jupyter**: notebook, ipykernel, jupyter_dash;
-   * **teste**: pytest;
-   * **etc**: fortls, isort, colorama;
+## Sabores
+- `<prefixo>-dev` - Imagem voltada para ambientes de desenvolvimento
+  * Um ambiente `miniconda` com `python 3.x`;
+  * O compilador `gfortran`; 
+  * A ferramenta de automação de build `cmake` 
+  * O gestor de repositorio `git`;
+  * O editor de text `vim`;
+  * O meta-pacote `build-essential`;
+  * pacotes python:
+    * **C binding**: cython;
+    * **ciência de dados**: numpy, scipy, scikit-learn, pandas;
+    * **visualização de dados**: matplotlib, plotly, tables;
+    * **jupyter**: notebook, ipykernel, jupyter_dash;
+    * **teste**: pytest;
+    * **etc**: fortls, isort, colorama;
+<!-- - `<prefixo>-prod` - Imagem voltada para ambientes de produção -->
+## Plataformas
 
+A imagem está disponível para as seguintes plataformas:
+ * `linux/amd64`
+ * `linux/arm64`
 ## Como usar
 
-Você pode usar a imagem para criar ambientes de desenvolvimento para projetos fortran, criando um 
-arquivo `docker-compose.yml` na raiz do seu projeto:
+Recomenda-se integrar a imagem com o plugin `Remote - Containers` do vscode. Você pode encontrar 
+mais detalhes sobre o plugin [aqui](https://code.visualstudio.com/docs/remote/containers).
+
+
+Você também pode usar a imagem para criar um container a ser executado de forma persistente, para 
+posteriormente se conectar a ele. Criando um arquivo `docker-compose.yml` na raiz do seu projeto:
 
 ```yaml
 version: "3.8"
 services:
   org-fortran-project-dev:
-    image: ghcr.io/crops-team/fortran:1.0.0-dev
+    image: ghcr.io/crops-team/fortran:v1.0.0-dev
     container_name: org-fortran-project-dev
     # mantem o container ativo
     tty: true
