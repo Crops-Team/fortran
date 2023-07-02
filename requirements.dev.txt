@@ -1,8 +1,6 @@
 Cython
 pandas
 geopandas
-polars
-geopolars
 openpyxl
 numpy
 scipy
