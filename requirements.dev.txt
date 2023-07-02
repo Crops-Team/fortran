@@ -1,8 +1,16 @@
 Cython
 pandas
+geopandas
+polars
+geopolars
+openpyxl
 numpy
 scipy
 scikit-learn
+flask
+flask_httpauth
+flask_caching
+gunicorn
 notebook
 ipykernel
 jupyter_dash
@@ -13,3 +21,4 @@ matplotlib
 isort
 fortls
 pytest
+pytest-html
