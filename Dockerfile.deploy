@@ -1,9 +1,9 @@
 FROM continuumio/miniconda3:4.12.0
-ADD ./requirements.dev.txt  /tmp/requirements.txt
+ADD ./requirements.deploy.txt  /tmp/requirements.txt
 
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends \
-    build-essential gfortran libgdal-dev cmake git vim curl
+    build-essential gfortran libgdal-dev cmake vim curl
 ENV LANG pt_BR.UTF-8
 
 RUN conda init bash

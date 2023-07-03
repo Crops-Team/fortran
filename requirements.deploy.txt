@@ -9,14 +9,9 @@ flask
 flask_httpauth
 flask_caching
 gunicorn
-notebook
-ipykernel
-jupyter_dash
+dash
+dash_bootstrap_components
 colorama
 tables
 plotly
 matplotlib
-isort
-fortls
-pytest
-pytest-html
