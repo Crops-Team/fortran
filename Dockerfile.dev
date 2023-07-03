@@ -7,8 +7,8 @@ RUN apt-get install -y --no-install-recommends \
 ENV LANG pt_BR.UTF-8
 
 RUN conda init bash
-RUN conda create -n deploy python=3.8
-RUN echo "conda activate deploy" >> ~/.bashrc
+RUN conda create -n dev python=3.8
+RUN echo "conda activate dev" >> ~/.bashrc
 SHELL ["/bin/bash", "-c"]
 
 RUN source ~/.bashrc && pip3 install --no-cache-dir -r /tmp/requirements.txt
