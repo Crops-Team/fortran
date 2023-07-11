@@ -9,7 +9,7 @@ RUN apt-get install -y --no-install-recommends \
 RUN curl -fsSL https://download.docker.com/linux/debian/gpg | \
     gpg --dearmor -o /etc/apt/trusted.gpg.d/docker-archive-keyring.gpg
 RUN add-apt-repository \
-    "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
+    "deb [arch=amd64,arm64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends \
     docker-ce docker-ce-cli containerd.io docker-compose-plugin
