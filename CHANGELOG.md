@@ -39,7 +39,10 @@
 
 ## [1.2.1] : [1.2.0...1.2.1]
 
----
+### Corrigido
+
+- Corrige nome do ambiente `conda` nas imagen de desenvolvimento, estava 
+  sendo nomeado como `deploy`.
 
 ## [1.2.0] : [1.0.0...1.2.0]
 
