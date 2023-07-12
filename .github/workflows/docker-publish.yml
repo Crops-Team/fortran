@@ -18,7 +18,7 @@ jobs:
     strategy:
       matrix:
         context:
-          - deploy          
+          - prod          
           - dev
 
     permissions:

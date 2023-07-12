@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  fortran-dev:
+    build:
+      tags:
+        - "fortran:latest-dev"
+      context: ..
+      dockerfile: Dockerfile.dev
+    tty: true
