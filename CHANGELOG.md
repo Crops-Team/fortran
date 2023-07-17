@@ -10,6 +10,10 @@
 
 ### Outros
 
+- A documentação e`devcontainer.json` tratam de forma equivocada o
+  suporte docker dentro de contêineres de desenvolvimento. Não se
+  trata de DinD (docker in docker) mas sim de DooD (docker out of docker).
+
 ---
 
 ## [1.3.0] : [1.2.1...1.3.0]
