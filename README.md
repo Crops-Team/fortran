@@ -8,9 +8,9 @@ de modelos agricola.
   * Ferramentas extras: `build-essential`, `git`, `gfortran`, `libgdal-dev`, `cmake`, `vim`, `curl`,
     `docker-ce`, `docker-ce-cli`, `containerd.io`, `docker-compose-plugin`;
     
-  > **OBS**: Para contêineres DinD (docker in docker) é preciso rodar o contêner com `--privileged`
-    assim como montar o `docker.socket` no container. Observe que isto envolve questões de segurança
-    relevantes para o seu uso.
+  > **OBS**: Para contêineres DooD (docker out of docker) é preciso montar o `docker.socket` do
+    hospedeiro no container. Observe que isto envolve questões de segurança que podem ser relevantes 
+    para o seu uso.
 
   * pacotes python: `setuptools>=46.0`,`wheel`, `build`, `Cython`, `pandas`, `geopandas`, 
     `openpyxl`, `numpy`, `scipy`, `scikit-learn`, `flask`, `flask_httpauth`, `flask_caching`, 

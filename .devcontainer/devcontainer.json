@@ -4,7 +4,6 @@
     "dockerComposeFile": "docker-compose.yml",
     "workspaceFolder": "/root/fortran",
     "shutdownAction": "stopCompose",
-    "runArgs": ["--init", "--privileged"],
     "overrideCommand": false,
     "mounts": [
       "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
