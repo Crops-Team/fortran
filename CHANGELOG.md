@@ -16,6 +16,25 @@
 
 ---
 
+## [1.3.2] : [1.3.1...1.3.2]
+
+### Adicionado
+
+- Adiciona `curl` na imagem de produção, para health checks.
+- Adiciona o pacote python `pytest-xdist` permitindo abordar os testes de forma paralela
+  no futuro.
+
+## [1.3.1] : [1.3.0...1.3.1]
+
+### Adicionado
+
+- Adiciona `gdb` e e o pacote python para o `docker SDK` a imagem de desenvolvimento.
+
+### Corrigido
+
+- corrige `devcontainer` em `README.md` na verdade foi adicionado suporte para 
+  `docker-out-of-docker`.
+
 ## [1.3.0] : [1.2.1...1.3.0]
 
 ### Adicionado
@@ -60,7 +79,13 @@
 
 - Primeiro release.
 
-[unreleased]: https://github.com/Crops-Team/fortran/compare/v1.3.0...HEAD
+[unreleased]: https://github.com/Crops-Team/fortran/compare/v1.3.2...HEAD
+
+[1.3.2]: https://github.com/Crops-Team/fortran/releases/tag/v1.3.2
+[1.3.1...1.3.2]: https://github.com/Crops-Team/fortran/compare/v1.3.1...v1.3.2
+
+[1.3.1]: https://github.com/Crops-Team/fortran/releases/tag/v1.3.1
+[1.3.0...1.3.1]: https://github.com/Crops-Team/fortran/compare/v1.3.0...v1.3.1
 
 [1.3.0]: https://github.com/Crops-Team/fortran/releases/tag/v1.2.1
 [1.2.1...1.3.0]: https://github.com/Crops-Team/fortran/compare/v1.2.1...v1.3.0
