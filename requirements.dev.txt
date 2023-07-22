@@ -23,4 +23,5 @@ isort
 fortls
 pytest
 pytest-html
+pytest-xdist
 docker
