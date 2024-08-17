@@ -1,15 +1,19 @@
-FROM continuumio/miniconda3:4.12.0
+FROM continuumio/miniconda3:24.5.0-0
 ADD ./requirements.dev.txt  /tmp/requirements.txt
 
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends \
-    build-essential gfortran libgdal-dev cmake gdb git vim curl \
-    apt-transport-https ca-certificates gnupg2 software-properties-common
-    
-RUN curl -fsSL https://download.docker.com/linux/debian/gpg | \
-    gpg --dearmor -o /etc/apt/trusted.gpg.d/docker-archive-keyring.gpg
-RUN add-apt-repository \
-    "deb [arch=amd64,arm64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
+    build-essential gfortran libgdal-dev cmake gdb git vim curl ca-certificates lsb-release
+
+
+RUN apt-get install ca-certificates curl
+RUN install -m 0755 -d /etc/apt/keyrings
+RUN curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
+RUN chmod a+r /etc/apt/keyrings/docker.asc
+
+RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] \
+    https://download.docker.com/linux/debian $(lsb_release -cs) stable" | \
+    tee /etc/apt/sources.list.d/docker.list > /dev/null
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends \
     docker-ce docker-ce-cli containerd.io docker-compose-plugin
@@ -17,7 +21,7 @@ RUN apt-get install -y --no-install-recommends \
 ENV LANG pt_BR.UTF-8
 
 RUN conda init bash
-RUN conda create -n dev python=3.8
+RUN conda create -n dev python=3.11
 RUN echo "conda activate dev" >> ~/.bashrc
 SHELL ["/bin/bash", "-c"]
 
