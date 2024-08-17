@@ -4,7 +4,7 @@ de modelos agricola.
 
 ## Sabores
 - `<prefixo>-dev` - Imagem voltada para ambientes de desenvolvimento
-  * Um ambiente `miniconda` com `python 3.8`;
+  * Um ambiente `miniconda` com `python 3.11`;
   * Ferramentas extras: `build-essential`, `git`, `gfortran`, `libgdal-dev`, `cmake`, `vim`, `curl`,
     `docker-ce`, `docker-ce-cli`, `containerd.io`, `docker-compose-plugin`;
     
@@ -13,12 +13,13 @@ de modelos agricola.
     para o seu uso.
 
   * pacotes python: `setuptools>=46.0`,`wheel`, `build`, `Cython`, `pandas`, `geopandas`, 
-    `openpyxl`, `numpy`, `scipy`, `scikit-learn`, `flask`, `flask_httpauth`, `flask_caching`, 
-    `gunicorn`, `notebook`, `ipykernel`, `jupyter_dash`, `colorama`, `tables`, `plotly`,
-    `matplotlib`, `isort`, `fortls`, `pytest`, `pytest-html`,
+    `openpyxl`, `pyarrow`, `numpy`, `scipy`, `scikit-learn`, `flask`, `flask_httpauth`, 
+    `flask_caching`, `gunicorn`, `notebook`, `ipykernel`, `jupyter_dash`, `colorama`, `tables`, 
+    `plotly`, `matplotlib`, `isort`, `fortls`, `pytest`, `pytest-cov`, `pytest-html`, 
+    `pytest-xdist`, `docker`;
 
 - `<prefixo>-prod` - Imagem voltada para ambientes de produção
-  * Um ambiente `miniconda` com `python 3.8`;
+  * Um ambiente `miniconda` com `python 3.11`;
   * Biblioteca `libgfortran`
 ## Plataformas
 
@@ -39,7 +40,7 @@ posteriormente se conectar a ele. Criando um arquivo `docker-compose.yml` na rai
 version: "3.8"
 services:
   org-fortran-project-dev:
-    image: ghcr.io/crops-team/fortran:v1.3.0-dev
+    image: ghcr.io/crops-team/fortran:v1.4.0-dev
     volumes:
       # mapeia o diretorio do projeto para o container  
       - .:/root/project:delegated
