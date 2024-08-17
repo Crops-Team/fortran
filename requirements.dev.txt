@@ -5,6 +5,7 @@ Cython
 pandas
 geopandas
 openpyxl
+pyarrow
 numpy
 scipy
 scikit-learn
@@ -22,6 +23,7 @@ matplotlib
 isort
 fortls
 pytest
+pytest-cov
 pytest-html
 pytest-xdist
 docker
